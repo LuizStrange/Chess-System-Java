@@ -1,7 +1,9 @@
-import boardgame.Board;
+import chess.Chessmatch;
 
 public class Main {
     public static void main(String[] args) {
-        Board board = new Board(8, 8);
+        Chessmatch chessmatch = new Chessmatch();
+
+        UI.printBoard(chessmatch.getPieces());
     }
 }
