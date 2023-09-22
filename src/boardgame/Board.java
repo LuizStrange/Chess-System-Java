@@ -1,9 +1,9 @@
 package boardgame;
 
 public class Board {
-    private int rows;
-    private int columns;
-    private Piece[][] pieces;
+    final private int rows;
+    final private int columns;
+    final private Piece[][] pieces;
 
     public Board(int rows, int columns) {
         if(rows < 1 || columns < 1) {
@@ -23,7 +23,6 @@ public class Board {
     public int getColumn() {
         return columns;
     }
-
 
     public Piece piece(int row, int column) {
         if(!positionExists(row, column)) {
@@ -60,7 +59,7 @@ public class Board {
         piece.position = position;
     }
 
-    public boolean positionExists(int row, int column) {
+    private boolean positionExists(int row, int column) {
         return row >= 0 && row < rows && column >= 0 && column < columns;
     }
 
