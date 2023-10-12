@@ -1,5 +1,7 @@
 package boardgame;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Board {
     final private int rows;
     final private int columns;
@@ -20,7 +22,7 @@ public class Board {
 
 
 
-    public int getColumn() {
+    public int getColumns() {
         return columns;
     }
 
@@ -63,7 +65,7 @@ public class Board {
         return row >= 0 && row < rows && column >= 0 && column < columns;
     }
 
-    public boolean positionExists(Position position) {
+    public boolean positionExists( Position position ) {
         return positionExists(position.getRow(), position.getColumn());
     }
 

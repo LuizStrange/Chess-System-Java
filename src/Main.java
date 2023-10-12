@@ -1,4 +1,3 @@
-
 import chess.ChessException;
 import chess.ChessMatch;
 import chess.ChessPiece;
@@ -14,15 +13,14 @@ public class Main {
 
         while (true) {
             try {
-                UI.clearScreen();
-                UI.printBoard(chessmatch.getPieces());
+                application.UI.printBoard(chessmatch.getPieces());
                 System.out.println();
                 System.out.print("Source: ");
-                ChessPosition source = UI.readChessPosition(sc);
+                ChessPosition source = application.UI.readChessPosition(sc);
 
                 System.out.println();
                 System.out.print("Target: ");
-                ChessPosition target = UI.readChessPosition(sc);
+                ChessPosition target = application.UI.readChessPosition(sc);
 
                 ChessPiece capturedPiece = chessmatch.performChessMove(source, target);
             }
